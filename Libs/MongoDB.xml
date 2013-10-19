@@ -1,0 +1,357 @@
+<?xml version="1.0"?>
+<doc>
+  <assembly>
+    <name>MongoDB</name>
+  </assembly>
+  <members>
+    <member name="M:MongoDB.Repository.ConfigurationRegistration.Exist(System.Type)">
+      <summary>
+            is MongoDB configuration existed
+            </summary>
+      <param name="type">MongoDBContext Type</param>
+      <returns>
+      </returns>
+    </member>
+    <member name="M:MongoDB.Repository.ConfigurationRegistration.Add(System.Type,MongoDB.Driver.MongoUrl)">
+      <summary>
+            add one MongoUrl
+            </summary>
+      <param name="type">MongoDBContext Type</param>
+      <param name="url">MongoUrl</param>
+    </member>
+    <member name="M:MongoDB.Repository.ConfigurationRegistration.Remove(System.Type)">
+      <summary>
+            remove MongoDB configuration
+            </summary>
+      <param name="type">MongoDBContext Type</param>
+    </member>
+    <member name="M:MongoDB.Repository.ConfigurationRegistration.Get(System.Type)">
+      <summary>
+            get MongoDB configuration
+            </summary>
+      <param name="type">MongoDBContext Type</param>
+      <returns>
+      </returns>
+    </member>
+    <member name="M:MongoDB.Repository.ConfigurationRegistration.GetDataBaseName(System.Type)">
+      <summary>
+            get MongoDB database name of configuration of MongoDBContext type
+            </summary>
+      <param name="type">MongoDBContext Type</param>
+      <returns>
+      </returns>
+    </member>
+    <member name="M:MongoDB.Repository.IDBClient.Close">
+      <summary>
+            dispose resources
+            </summary>
+    </member>
+    <member name="P:MongoDB.Repository.IDBClient.DBName">
+      <summary>
+            database name
+            </summary>
+    </member>
+    <member name="P:MongoDB.Repository.IDBClient.Collection">
+      <summary>
+            return MongoCollection
+            </summary>
+    </member>
+    <member name="P:MongoDB.Repository.DBClient.DBName">
+      <summary>
+            database name
+            </summary>
+    </member>
+    <member name="P:MongoDB.Repository.DBClient.Collection">
+      <summary>
+            MongoCollection
+            </summary>
+    </member>
+    <member name="M:MongoDB.Repository.DBFactory.GetClient(System.Type)">
+      <summary>
+            get one MongoDBClient by collection type
+            </summary>
+      <param name="type">collection type</param>
+      <returns>
+      </returns>
+    </member>
+    <member name="M:MongoDB.Repository.DBFactory.GetClient``1">
+      <summary>
+            get one MongoDBClient by collection type
+            </summary>
+      <typeparam name="T">collection type</typeparam>
+      <returns>
+      </returns>
+    </member>
+    <member name="M:MongoDB.Repository.DBFactory.GetClient">
+      <summary>
+      </summary>
+      <returns>
+      </returns>
+    </member>
+    <member name="M:MongoDB.Repository.IEntity.Save">
+      <summary>
+            save document
+            </summary>
+    </member>
+    <member name="M:MongoDB.Repository.IEntity.Remove">
+      <summary>
+            remove document
+            </summary>
+    </member>
+    <member name="M:MongoDB.Repository.IEntity.ToDBRef">
+      <summary>
+            convert to mongodbref
+            </summary>
+      <returns>
+      </returns>
+    </member>
+    <member name="P:MongoDB.Repository.IEntity.Id">
+      <summary>
+            mongo id
+            </summary>
+    </member>
+    <member name="T:MongoDB.Repository.GridFs.File">
+      <summary>
+                文件类
+            </summary>
+    </member>
+    <member name="M:MongoDB.Repository.GridFs.File.Save">
+      <summary>
+                保存文件
+            </summary>
+    </member>
+    <member name="M:MongoDB.Repository.GridFs.File.Remove">
+      <summary>
+                删除文件
+            </summary>
+    </member>
+    <member name="P:MongoDB.Repository.GridFs.File.FileName">
+      <summary>
+                文件名
+            </summary>
+    </member>
+    <member name="P:MongoDB.Repository.GridFs.File.FileObjectId">
+      <summary>
+                文件所在GridFs的ObjectId
+            </summary>
+    </member>
+    <member name="P:MongoDB.Repository.GridFs.File.Id">
+      <summary>
+                文件所在GridFs的Id
+            </summary>
+    </member>
+    <member name="P:MongoDB.Repository.GridFs.File.Data">
+      <summary>
+                文件数据
+            </summary>
+    </member>
+    <member name="P:MongoDB.Repository.GridFs.File.MD5">
+      <summary>
+                文件MD5码
+            </summary>
+    </member>
+    <member name="M:MongoDB.Repository.IRegistrationContext.RegisterDBContext(MongoDB.Repository.IMongoDBContext)">
+      <summary>
+            register IMongoDBContext
+            </summary>
+      <param name="context">IMongoDBContext</param>
+    </member>
+    <member name="M:MongoDB.Repository.IRegistrationContext.IsRegisterType``1">
+      <summary>
+            is type registered
+            </summary>
+      <typeparam name="T">collection type</typeparam>
+      <returns>
+      </returns>
+    </member>
+    <member name="M:MongoDB.Repository.IRegistrationContext.IsRegisterType(System.Type)">
+      <summary>
+            is type registered
+            </summary>
+      <param name="type">collection type</param>
+      <returns>
+      </returns>
+    </member>
+    <member name="M:MongoDB.Repository.IRegistrationContext.UnregisterType(System.Type)">
+      <summary>
+            unregister type
+            </summary>
+      <param name="type">collection type</param>
+    </member>
+    <member name="M:MongoDB.Repository.IRegistrationContext.RegisterType(System.Type)">
+      <summary>
+            register type
+            </summary>
+      <param name="type">collection type</param>
+    </member>
+    <member name="M:MongoDB.Repository.IRegistrationContext.GetMongoUrl">
+      <summary>
+            return MongoUrl
+            </summary>
+      <returns>
+      </returns>
+    </member>
+    <member name="P:MongoDB.Repository.IRegistrationContext.Code">
+      <summary>
+            unique code for IMongoDBContext(default: connectionstring name in config file)
+            </summary>
+    </member>
+    <member name="P:MongoDB.Repository.IRegistrationContext.DBName">
+      <summary>
+            database name(default: get from config file)
+            </summary>
+    </member>
+    <member name="M:MongoDB.Repository.ITypeRegistration.RegisterDatabase(System.String)">
+      <summary>
+            register database
+            </summary>
+      <param name="dbName">database name</param>
+      <returns>
+      </returns>
+    </member>
+    <member name="M:MongoDB.Repository.ITypeRegistration.RegisterType``1">
+      <summary>
+            register collection type
+            </summary>
+      <typeparam name="T">collection type</typeparam>
+      <returns>
+      </returns>
+    </member>
+    <member name="M:MongoDB.Repository.ITypeRegistration.RegisterType(System.Type)">
+      <summary>
+            register collection type
+            </summary>
+      <param name="entityType">collection type</param>
+      <returns>
+      </returns>
+    </member>
+    <member name="M:MongoDB.Repository.ITypeRegistration.UnRegisterType``1">
+      <summary>
+            unregister collection type
+            </summary>
+      <typeparam name="T">collection type</typeparam>
+      <returns>
+      </returns>
+    </member>
+    <member name="M:MongoDB.Repository.ITypeRegistration.UnRegisterType(System.Type)">
+      <summary>
+            unregister collection type
+            </summary>
+      <param name="entityType">collection type</param>
+      <returns>
+      </returns>
+    </member>
+    <member name="M:MongoDB.Repository.ITypeRegistration.IsRegisterType``1">
+      <summary>
+            is collection type registered
+            </summary>
+      <typeparam name="T">collection type</typeparam>
+      <returns>
+      </returns>
+    </member>
+    <member name="M:MongoDB.Repository.ITypeRegistration.IsRegisterType(System.Type)">
+      <summary>
+            is collection type registered
+            </summary>
+      <param name="entityType">collection type</param>
+      <returns>
+      </returns>
+    </member>
+    <member name="M:MongoDB.Repository.ITypeRegistration.GetRegisterTypes">
+      <summary>
+            get all registered collection types
+            </summary>
+      <returns>
+      </returns>
+    </member>
+    <member name="M:MongoDB.Repository.IMongoDBContext.OnRegisterModel(MongoDB.Repository.ITypeRegistration)">
+      <summary>
+            register entity type
+            </summary>
+      <param name="registration">
+      </param>
+    </member>
+    <member name="M:MongoDB.Repository.IMongoDBContext.BuildConfiguration">
+      <summary>
+            build Configuration by config file
+            </summary>
+      <returns>
+      </returns>
+    </member>
+    <member name="P:MongoDB.Repository.IMongoDBContext.ConnectionStringName">
+      <summary>
+            name of ConnectionString in config file
+            </summary>
+    </member>
+    <member name="T:MongoDB.Repository.MongoDBRepository">
+      <summary>
+            MongoDBRepository
+            </summary>
+    </member>
+    <member name="M:MongoDB.Repository.MongoDBRepository.RegisterMongoDBContext(MongoDB.Repository.IMongoDBContext)">
+      <summary>
+            register IMongoDBContext if not exists
+            </summary>
+      <param name="dbContext">
+      </param>
+    </member>
+    <member name="M:MongoDB.Repository.MongoDBRepository.GetConfig(System.Type)">
+      <summary>
+            get MongoUrl of type which first found
+            </summary>
+      <param name="type">collection type</param>
+      <returns>
+      </returns>
+    </member>
+    <member name="M:MongoDB.Repository.MongoDBRepository.GetConfig``1">
+      <summary>
+            get MongoUrl of type which first found
+            </summary>
+      <typeparam name="T">collection type</typeparam>
+      <returns>
+      </returns>
+    </member>
+    <member name="M:MongoDB.Repository.MongoDBRepository.RegisterType(System.Type,System.Type)">
+      <summary>
+            register collection type for IMongoDBContext
+            </summary>
+      <param name="dbContextType">IMongoDBContext</param>
+      <param name="entityType">collection type</param>
+    </member>
+    <member name="M:MongoDB.Repository.MongoDBRepository.RegisterType``2">
+      <summary>
+            register collection type for IMongoDBContext
+            </summary>
+      <typeparam name="TDBContextType">IMongoDBContext</typeparam>
+      <typeparam name="TEntityType">collection type</typeparam>
+    </member>
+    <member name="M:MongoDB.Repository.MongoDBRepository.IsRegisterType(System.Type)">
+      <summary>
+            is register collection type
+            </summary>
+      <param name="type">collection type</param>
+      <returns>
+      </returns>
+    </member>
+    <member name="M:MongoDB.Repository.MongoDBRepository.IsRegisterType``1">
+      <summary>
+            is register collection type
+            </summary>
+      <typeparam name="T">collection type</typeparam>
+      <returns>
+      </returns>
+    </member>
+    <member name="M:MongoDB.Repository.MongoDBRepository.UnregisterType(System.Type)">
+      <summary>
+            unregister collection type
+            </summary>
+      <param name="type">collection type</param>
+    </member>
+    <member name="M:MongoDB.Repository.MongoDBRepository.UnregisterType``1">
+      <summary>
+            unregister collection type
+            </summary>
+      <typeparam name="T">collection type</typeparam>
+    </member>
+  </members>
+</doc>
