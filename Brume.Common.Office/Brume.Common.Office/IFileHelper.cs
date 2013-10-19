@@ -10,6 +10,6 @@ namespace Brume.Common.Office
     {
         string GetDocumentPath(string id);
 
-        void ClearTempDocument();
+        void ClearTempDocument(string dir);
     }
 }
