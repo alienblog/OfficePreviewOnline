@@ -1,0 +1,14 @@
+﻿@model IEnumerable<Brume.PreviewOnline.Models.DocModel>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>@Html.ActionLink("添加文档","Add")</h2>
+
+<ul>
+    @foreach (var doc in Model)
+    {
+        <li>@Html.ActionLink(doc.Name,"Preview",new {id = doc.Doc.Id},new { target="_blank" })</li>
+    }
+</ul>

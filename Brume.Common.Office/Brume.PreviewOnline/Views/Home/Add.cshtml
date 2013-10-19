@@ -1,0 +1,13 @@
+﻿@model Brume.PreviewOnline.Models.DocModel
+
+@{
+    ViewBag.Title = "Add";
+}
+
+<h2>添加文档</h2>
+
+<form action="/Home/Add" enctype="multipart/form-data" method="post">
+    <p><span>文件名：</span> <input id="Name" name="Name" type="text" value="" /></p>
+    <p><input type="file" name="document" /></p>
+    <button type="submit">添加</button>
+</form>

@@ -14,6 +14,7 @@ namespace Brume.Common.Office
         public string GetDocumentPath(string id)
         {
             var file = new File { Id = id };
+            file.Load();
 
             if (file.Data.Length == 0)
                 throw new FileNotFoundException(id);

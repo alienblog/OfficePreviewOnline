@@ -1,0 +1,11 @@
+﻿@model Brume.PreviewOnline.Models.DocModel
+
+@{
+    ViewBag.Title = "Delete";
+}
+
+<h2>真的要删除 @Model.Name 吗？</h2>
+@Html.BeginForm(){
+    <input type="hidden" value="@Model.Id"/>
+    <button type="submit">确认删除</button>
+}
